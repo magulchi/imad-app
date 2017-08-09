@@ -68,15 +68,16 @@ var articles = {
                     this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
                 </p>`},
 };
-function createtemplate(data){
-    var title= data.title;
+function createTemplate(data){
+    var title=data.title;
     var date=data.date;
     var heading=data.heading;
     var content=data.content;
 var htmltemplate = `
 <html>
     <head>
-        <title>${title}</title>
+        <title>${title}
+        </title>
       <link href="/ui/style.css" rel="stylesheet" />
     </head>
     <body>
@@ -98,14 +99,14 @@ var htmltemplate = `
     </body>
 </html>
 `;
-return htmltemplate;
+return htmlTemplate;
 }
 
 
 
 app.get('/:articlename', function (req, res){
     var articleName=req.params.articleName;
-    res.send(createtemplate(articles[articleName]));
+    res.send(createTemplate(articles[articleName]));
 });
 
 
