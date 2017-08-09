@@ -102,7 +102,7 @@ return htmltemplate;
 
 
 app.get('/:articlename', function (req, res){
-    articlename=req.params.articlename;
+    var articlename=req.params.articlename;
     res.send(createtemplate(articles[articlename]));
 });
 
