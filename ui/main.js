@@ -1,14 +1,8 @@
-console.log('Loaded!');
-var element = document.getElementById('main-text');
-var img = document.getElementById('akshay');
-var marginLeft=0;
-function moveRight()
+var button = document.getElementById('counter');
+var counter=0;
+button.onclick = function()
 {
-    marginLeft=marginLeft+1;
-    img.style.marginLeft= marginLeft +'px';
+    counter=counter+1;
+    var span = document.getElementById('count');
+    span.innerHTML=counter.toString();
 }
-img.onclick = function()
-{
-    var interval= setInterval(moveRight,10);
-    //img.style.marginLeft='100px';
-};
