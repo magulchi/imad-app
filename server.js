@@ -66,7 +66,7 @@ var articles = {
                     this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
                     this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
                     this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
-                </p>`}
+                </p>`},
 };
 function createtemplate(data){
     var title= data.title;
