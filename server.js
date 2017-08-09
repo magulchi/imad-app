@@ -9,7 +9,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var articleone = {
+var article = {
+    'article-one':{
     title: 'article-one! magilchi',
     heading:'article-one',
     date: 'jul 30 1997',
@@ -29,6 +30,41 @@ var articleone = {
                     this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
                     this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
                 </p>`
+},
+    'article-two':{title: 'article-two! magilchi',
+    heading:'article-two',
+    date: 'aug 24 1997',
+    content:`
+    <p>
+                    this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
+                    this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
+                    this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
+                </p>
+    
+                 <p>
+                    this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
+                    this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
+                    this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
+                </p>`},
+    'article-three':{title: 'article-three! magilchi',
+    heading:'article-three',
+    date: 'feb 14 1997',
+    content:`
+    <p>
+                    this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
+                    this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
+                    this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
+                </p>
+                <p>
+                    this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
+                    this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
+                    this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
+                </p>
+                 <p>
+                    this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
+                    this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
+                    this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
+                </p>`}
 };
 function createtemplate(data){
     var title= data.title;
@@ -65,17 +101,12 @@ return htmltemplate;
 
 
 
-app.get('/article-one', function (req, res){
-    res.send(createtemplate(articleone));
+app.get('/:articlename', function (req, res){
+    articlename=req.params.articlename;
+    res.send(createtemplate(articles[articlename]));
 });
 
-app.get('/article-two', function (req, res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
 
-app.get('/article-three', function (req, res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
