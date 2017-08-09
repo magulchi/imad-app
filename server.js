@@ -31,7 +31,8 @@ var articles = {
                     this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
                 </p>`
 },
-    'article-two':{title: 'article-two! magilchi',
+    'article-two':{
+    title: 'article-two! magilchi',
     heading:'article-two',
     date: 'aug 24 1997',
     content:`
@@ -46,7 +47,8 @@ var articles = {
                     this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
                     this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
                 </p>`},
-    'article-three':{title: 'article-three! magilchi',
+    'article-three':{
+    title: 'article-three! magilchi',
     heading:'article-three',
     date: 'feb 14 1997',
     content:`
