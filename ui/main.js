@@ -4,5 +4,5 @@ element.innerHTML= 'new html';
 var img = document.getElementById('akshay');
 img.onclick = function()
 {
-    img.style.marginleft='100px';
+    img.style.marginLeft='100px';
 };
