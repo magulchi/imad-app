@@ -102,8 +102,8 @@ return htmltemplate;
 
 
 app.get('/:articlename', function (req, res){
-    var articlename=req.params.articlename;
-    res.send(createtemplate(articles[articlename]));
+    var articleName=req.params.articleName;
+    res.send(createtemplate(articles[articleName]));
 });
 
 
