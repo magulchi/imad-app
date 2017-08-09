@@ -46,7 +46,9 @@ var articles = {
                     this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
                     this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
                     this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
-                </p>`},
+                </p>`
+        
+    },
     'article-three':{
     title: 'article-three! magilchi',
     heading:'article-three',
@@ -66,14 +68,16 @@ var articles = {
                     this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
                     this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
                     this is my first article.this is my first article.this is my first article.this is my first article.this is my first article.
-                </p>`},
+                </p>`
+        
+    },
 };
 function createTemplate(data){
     var title=data.title;
     var date=data.date;
     var heading=data.heading;
     var content=data.content;
-var htmltemplate = `
+var htmlTemplate = `
 <html>
     <head>
         <title>${title}
@@ -104,7 +108,7 @@ return htmlTemplate;
 
 
 
-app.get('/:articlename', function (req, res){
+app.get('/:articleName', function (req, res){
     var articleName=req.params.articleName;
     res.send(createTemplate(articles[articleName]));
 });
