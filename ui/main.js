@@ -42,7 +42,7 @@ submit.onclick = function(){
     };
 var nameInput = document.getElementById('name');
 var name = nameInput.value;
-  request.open('GET', 'http://akshayama466.imad.hasura-app.io/subnit-name?name=' +name ,true);
+  request.open('GET', 'http://akshayama466.imad.hasura-app.io/subnit-name?name=' + name ,true);
   request.send(null);
    
 };
