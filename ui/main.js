@@ -18,3 +18,16 @@ button.onclick = function()
   request.open('GET', 'http://akshayama466.imad.hasura-app.io/counter',true);
   request.send(null);
 };
+var nameinput = document.getElementById('name');
+var Name = nameInput.value;
+var submit= document.getEkementById('submit_btn');
+submit.onclick = function(){
+    var names=['name1','name2','name3','name4'];
+    var list='';
+    for(var i=0; i< names.length; i++)
+    {
+        list += '<li>' + names[i] + '</li>';
+    }
+    var ul = document.getElementById('namelist');
+    ul.innerHTML = list;
+};
